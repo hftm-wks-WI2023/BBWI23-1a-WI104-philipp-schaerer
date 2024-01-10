@@ -7,119 +7,124 @@ function setText(id, text) {
 function variableExample() {
     let example = 10;
 
-    setText('variable-example-1', example + 10);
-    setText('variable-example-2', example + '10');
-    setText('variable-example-3', example + '\'000');
+    // 20
+    // setText("variable-example-1", example + ...);
+    // 1010
+    // setText("variable-example-2", example + ...);
+    // 10'000
+    // setText("variable-example-3", example + ...);
 }
 
 function ifElseExample() {
-    const value = document.getElementById('if-else-input').value;
+    const value = document.getElementById("if-else-input").value;
 
-    if (value > 10) {
-        setText('if-else-example', 'Greater than 10');
-    } else {
-        setText('if-else-example', 'Less than or equal to 10');
-    }
+    // When > 10
+    // setText('if-else-example', 'Greater than 10');
+    // When <= 10
+    // setText('if-else-example', 'Less than or equal to 10');
 }
 
 function switchCaseExample() {
-    const value = document.getElementById('switch-case-input').value;
+    const value = document.getElementById("switch-case-input").value;
 
-    switch (value) {
-        case 'DE':
-            setText('switch-case-example', 'Hallo Welt!');
-            break;
-        case 'EN':
-            setText('switch-case-example', 'Hello World!');
-            break;
-        case 'FR':
-            setText('switch-case-example', 'Bonjour le monde!');
-            break;
-        case 'IT':
-            setText('switch-case-example', 'Ciao mondo!');
-            break;
-        default:
-            setText('switch-case-example', 'Unknown language');
-            break;
-    }
-
+    // DE
+    // setText('switch-case-example', 'Hallo Welt!');
+    // EN
+    // setText('switch-case-example', 'Hello World!');
+    // FR
+    // setText('switch-case-example', 'Bonjour le monde!');
+    // IT
+    // setText('switch-case-example', 'Ciao mondo!');
+    // Unknown
+    // setText('switch-case-example', 'Unknown language');
 }
 
 function functionExample(value) {
-    setText('function-example-1', Math.floor(value));
-    setText('function-example-2', Math.ceil(value));
-    setText('function-example-3', Math.round(value * 100) / 100);
+    /*
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+    */
+    // 12
+    // setText("function-example-1", Math. ...);
+    // 13
+    // setText("function-example-2", Math. ...);
+    // 12.25
+    // setText("function-example-3", Math. ...);
 }
 
 function interpolationExample() {
-    const value = '10\'000';
+    const value = "10'000";
 
-    setText('interpolation-example-1', value + ' Einwohner');
-    setText('interpolation-example-2', 'Einwohnerzahl: ' + value);
-    setText('interpolation-example-3', `Es wurden ${value} Einwohner gezählt.`);
+    // 10'000 Einwohner
+    // setText("interpolation-example-1", ...);
+
+    // Einwohnerzahl: 10'000
+    // setText("interpolation-example-2", ...);
+
+    // Es wurden 10'000 Einwohner gezählt.
+    // setText("interpolation-example-3", ...);
 }
 
 // Middle
-
 function conditionalPluralExample() {
-    const value = document.getElementById('conditional-plural-input').value;
+    const value = document.getElementById("conditional-plural-input").value;
 
-    if (value > 1) {
-        setText('conditional-plural-example', `${value} Personen`);
-    }
-    else {
-        setText('conditional-plural-example', `${value} Person`);
-    }
+    // When > 1 = ... Personen
+    // setText("conditional-plural-example", ...);
+
+    // Else = ... Person
+    // setText("conditional-plural-example", ...);
 }
 
 // Advanced
 function drawLeftSidedPyramid() {
-    let text = '';
+    let text = "";
 
-    for (let row = 0; row < 7; row++) {
-        let pyramid = '';
-        for (let column = 0; column <= row; column++) {
-            pyramid += '*';
-        }
-        text += pyramid + '\n';
-    }
+    // for (let row = 0; ...) {
+    //     rowText = ... init
+    //     for (let column = 0; ...) {
+    //         //columnText += ...
+    //     }
+    //     rowText +=
+    // }
 
-    setText('left-sided-pyramid', text);
+    setText("left-sided-pyramid", text);
 }
 
 function drawRightSidedPyramid() {
-    let text = '';
+    let text = "";
 
-    for (let row = 0; row < 7; row++) {
-        let pyramid = '';
-        for (let space = 0; space < 7 - row; space++) {
-            pyramid += ' ';
-        }
-        for (let column = 0; column <= row; column++) {
-            pyramid += '*';
-        }
-        text += pyramid + '\n';
-    }
+    // for (let row = 0; ...) {
+    //     rowText = ... init
+    //     for (... whitespace) {
+    //         //columnText += ...
+    //     }
+    //     for (... column) {
+    //         pyramid += "*";
+    //     }
+    //     ...
+    // }
 
-    setText('right-sided-pyramid', text);
+    setText("right-sided-pyramid", text);
 }
 
 function drawFullPyramid() {
-    let text = '';
+    let text = "";
 
-    for (let i = 0; i < 7; i++) {
-        let pyramid = '';
-        for (let space = 0; space < 7 - i; space++) {
-            pyramid += ' ';
-        }
-        for (let leftColumn = 0; leftColumn <= i; leftColumn++) {
-            pyramid += '*';
-        }
-        for (let rightColumn = 0; rightColumn <= i - 1; rightColumn++) {
-            pyramid += '*';
-        }
-        text += pyramid + '\n';
-    }
+    // for (...) {
+    //     ...
+    //     for (...) {
+    //         ...
+    //     }
+    //     for (... left) {
+    //         ...
+    //     }
+    //     for (... right) {
+    //         ...
+    //     }
+    //     ...
+    // }
 
-    setText('full-pyramid', text);
+    setText("full-pyramid", text);
 }

@@ -1,130 +1,101 @@
-// Helper
-function setText(id, text) {
-    document.getElementById(id).innerHTML = text;
+
+// ========================
+// Variablen
+// ========================
+
+const zahl = 42;
+const text = "Hallo Welt";
+const bool = true;
+const obj = {
+    name: "Max",
+    alter: 30
+};
+const arr = [1, 2, 3, 4, 5];
+
+// ========================
+// Arithmetische Operatoren
+// ========================
+
+const addieren = 1 + 2;
+const subtrahieren = 2 - 1;
+const multiplizieren = 2 * 2;
+const dividieren = 4 / 2;
+const modulo = 5 % 2; // Restwert, kann z.B. verwendet werden um zu prüfen ob eine Zahl gerade oder ungerade ist
+                      // Wennn der Restwert 0 ist, ist die Zahl gerade, ansonsten ungerade
+
+// ========================
+// Vergleichsoperatoren
+// ========================
+
+// Gleich
+if (1 === 1) {
+    console.log("1 ist gleich 1");
 }
 
-// Simple
-function variableExample() {
-    let example = 10;
-
-    // 20
-    // setText("variable-example-1", example + ...);
-    // 1010
-    // setText("variable-example-2", example + ...);
-    // 10'000
-    // setText("variable-example-3", example + ...);
+// Nicht gleich
+if (1 !== 2) {
+    console.log("1 ist nicht gleich 2");
 }
 
-function ifElseExample() {
-    const value = document.getElementById("if-else-input").value;
-
-    // When > 10
-    // setText('if-else-example', 'Greater than 10');
-    // When <= 10
-    // setText('if-else-example', 'Less than or equal to 10');
+// Kleiner als
+if (1 < 2) {
+    console.log("1 ist kleiner als 2");
+}
+// Kleiner oder gleich
+if (1 <= 1) {
+    console.log("1 ist kleiner oder gleich 1");
 }
 
-function switchCaseExample() {
-    const value = document.getElementById("switch-case-input").value;
-
-    // DE
-    // setText('switch-case-example', 'Hallo Welt!');
-    // EN
-    // setText('switch-case-example', 'Hello World!');
-    // FR
-    // setText('switch-case-example', 'Bonjour le monde!');
-    // IT
-    // setText('switch-case-example', 'Ciao mondo!');
-    // Unknown
-    // setText('switch-case-example', 'Unknown language');
+// Größer als
+if (2 > 1) {
+    console.log("2 ist größer als 1");
+}
+// Größer oder gleich
+if (2 >= 2) {
+    console.log("2 ist größer oder gleich 2");
 }
 
-function functionExample(value) {
-    /*
-      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
-      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
-      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
-    */
-    // 12
-    // setText("function-example-1", Math. ...);
-    // 13
-    // setText("function-example-2", Math. ...);
-    // 12.25
-    // setText("function-example-3", Math. ...);
+// Ein Else Block wird ausgeführt, wenn die Bedingung in der if-Anweisung nicht zutrifft
+if (false) {
+}
+else {
+    console.log("Die Bedingung ist nicht erfüllt");
 }
 
-function interpolationExample() {
-    const value = "10'000";
-
-    // 10'000 Einwohner
-    // setText("interpolation-example-1", ...);
-
-    // Einwohnerzahl: 10'000
-    // setText("interpolation-example-2", ...);
-
-    // Es wurden 10'000 Einwohner gezählt.
-    // setText("interpolation-example-3", ...);
+// Textvergleich
+if ("Hallo" === "Hallo") {
+    console.log("Die Texte sind gleich");
 }
 
-// Middle
-function conditionalPluralExample() {
-    const value = document.getElementById("conditional-plural-input").value;
-
-    // When > 1 = ... Personen
-    // setText("conditional-plural-example", ...);
-
-    // Else = ... Person
-    // setText("conditional-plural-example", ...);
+if ("Hallo" !== "Welt") {
+    console.log("Die Texte sind nicht gleich");
 }
 
-// Advanced
-function drawLeftSidedPyramid() {
-    let text = "";
+// ========================
+// Buil-in Funktionen
+// ========================
 
-    // for (let row = 0; ...) {
-    //     rowText = ... init
-    //     for (let column = 0; ...) {
-    //         //columnText += ...
-    //     }
-    //     rowText +=
-    // }
+// Math Funktionen (abs, floor, ceil) https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math
+const abs = Math.abs(-5); // ergibt 5
+const floor = Math.floor(3.6); // ergibt 3
+const ceil = Math.ceil(3.6); // ergibt 4
 
-    setText("left-sided-pyramid", text);
-}
+// Array Funktionen (push, pop, shift, unshift) https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
+const arr1 = [1, 2, 3, 4, 5];
+arr1.push(6);    // fügt 6 ans Ende des Arrays hinzu
+arr1.pop();      // entfernt das letzte Element des Arrays
+arr1.shift();    // entfernt das erste Element des Arrays
+arr1.unshift(0); // fügt 0 am Anfang des Arrays hinzu
 
-function drawRightSidedPyramid() {
-    let text = "";
+// ========================
+// Array Beispiele
+// ========================
 
-    // for (let row = 0; ...) {
-    //     rowText = ... init
-    //     for (... whitespace) {
-    //         //columnText += ...
-    //     }
-    //     for (... column) {
-    //         pyramid += "*";
-    //     }
-    //     ...
-    // }
+const arr2 = [1, 2, 3, 4, 5];
+const groesserAls3 = arr2.filter((zahl) => zahl > 3); // ergibt [4, 5]
+// Etwas ähnliches kann man dann auch mit dem Modulo % Operator machen damit die Liste nur gerade oder ungerade Zahlen enthält
 
-    setText("right-sided-pyramid", text);
-}
+const zusammengefügt = arr2.join(", "); // ergibt "1, 2, 3, 4, 5"
 
-function drawFullPyramid() {
-    let text = "";
-
-    // for (...) {
-    //     ...
-    //     for (...) {
-    //         ...
-    //     }
-    //     for (... left) {
-    //         ...
-    //     }
-    //     for (... right) {
-    //         ...
-    //     }
-    //     ...
-    // }
-
-    setText("full-pyramid", text);
-}
+const textListe = "a,b,c,d,e";
+const getrennt = textListe.split(","); // ergibt ["a", "b", "c", "d", "e"]

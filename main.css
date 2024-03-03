@@ -1,37 +1,40 @@
-body {
-    background-color: #EEE;
+/*
+======================================
+Beispiele
+========================================
+*/
+.formular input, .formular textarea, .formular button {
+    /*
+    mit display block wird das input-Element zu einem Block-Element
+    und jedes Element wird in einer neuen Zeile dargestellt
+    */
+    display: block;
 }
 
-main {
-    max-width: 1024px;
+/* Jedes zweite tr-Element in einer Tabelle erhält eine andere Hintergrundfarbe */
+table tr:nth-child(odd) {
+    background-color: #DDD;
+}
+
+/* Ein Beispiel von verschiedenen CSS Styles */
+.container {
+    /* Die Breite des Containers auf 300px festlegen */
+    width: 600px;
+    /* padding steuert den Abstand innerhalb des Containers, das erste 0 ist der Abstand oben und unten, das zweite der Abstand links und rechts */
+    padding: 0 20px;
+    /* Text zentrieren */
+    text-align: center;
+    /* Ein Abstand von 20px nach oben */
+    margin-top: 20px;
+}
+.container img {
+    /*
+    mit display block wird das input-Element zu einem Block-Element
+    und jedes Element wird in einer neuen Zeile dargestellt
+    */
+    display: block;
+
+    /* Das Bild zentrieren, das erste 0 ist der Abstand oben und unten, das zweite der Abstand links und rechts
+    (auto ergibt dann gleich viel Abstand auf beiden Seiten) */
     margin: 0 auto;
-}
-
-.card {
-    margin-bottom: 20px;
-}
-
-.example.simple {
-    background-color: lightcyan;
-    border-color: lightblue;
-}
-
-.example.advanced {
-    background-color: lightsalmon;
-    border-color: chocolate;
-}
-
-.test-area {
-    padding: 15px;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.target {
-    flex: 1;
-}
-.result {
-    flex: 1;
 }
